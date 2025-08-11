@@ -1,0 +1,116 @@
+.sidebar {
+  width: 250px; /* Adjust width as needed */
+  height: 100vh;
+  background-color: #343a40; /* Dark background color */
+  color: #f8f9fa; /* Light text color */
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  position: fixed; /* Fixed position */
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Subtle shadow */
+  transition: width 0.3s ease, transform 0.3s ease; /* For sidebar sliding */
+}
+
+.sidebar-brand {
+  padding: 15px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-brand a {
+  color: #f8f9fa;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.sidebar-brand a:hover {
+  color: #007bff; /* Highlight color on hover */
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-nav a {
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #adb5bd; /* Lighter grey for links */
+  font-size: 1.1em;
+  display: block; /* Make links take full width */
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-left: 3px solid transparent; /* For active link indicator */
+}
+
+.sidebar-nav a:hover {
+  background-color: #495057; /* Darker background on hover */
+  color: #f8f9fa; /* Light text on hover */
+  border-left-color: #007bff;
+}
+
+.sidebar-nav a.active {
+  background-color: #007bff; /* Active link background */
+  color: #ffffff; /* White text for active link */
+  font-weight: 500;
+  border-left-color: #ffffff; /* White indicator for active */
+}
+
+/* Optional: Style for icons if you add them */
+.sidebar-nav a i {
+  margin-right: 10px;
+  width: 20px; /* Ensure icons align nicely */
+  text-align: center;
+}
+
+.sidebar-logout {
+  margin-top: auto; /* Pushes logout to the bottom */
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #adb5bd;
+  font-size: 1.1em;
+  display: block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-top: 1px solid #495057; /* Separator line */
+}
+
+.sidebar-logout:hover {
+  background-color: #c82333; /* Reddish hover for logout */
+  color: #ffffff;
+}
+
+/* Adjust main content to not be overlapped by sidebar */
+/* This will be applied to the main content wrapper in App.js or a similar layout component */
+.content-with-sidebar {
+  margin-left: 250px; /* Same as sidebar width */
+  padding: 20px;
+  transition: margin-left 0.3s ease; /* For potential future collapse/expand */
+}
+
+/* Responsive: On smaller screens, sidebar is hidden by default and can be toggled. */
+@media (max-width: 768px) {
+  .sidebar {
+    /* Base styles like width: 250px, height: 100vh, position: fixed, left: 0, top: 0 are inherited. */
+    /* We ensure these are the active styles for the sidebar container on mobile, */
+    /* overriding the previous mobile-specific styles (width: 100%, height: auto, position: relative). */
+    width: 250px; /* Retain or set desired sidebar width */
+    height: 100vh; /* Full viewport height */
+    position: fixed; /* Keep it fixed */
+    /* left: 0 and top: 0 are inherited from the base .sidebar style */
+
+    transform: translateX(-100%); /* Hidden by default off-screen to the left */
+    z-index: 1050; /* Ensure sidebar is on top of other content, adjust if needed */
+  }
+
+  .sidebar.open { /* This class will be toggled with JavaScript */
+    transform: translateX(0); /* Slides the sidebar into view */
+  }
+
+  .content-with-sidebar {
+    margin-left: 0; 
+  }
+
+  
+}

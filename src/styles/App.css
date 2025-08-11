@@ -1,0 +1,673 @@
+/* Global anchor reset */
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/* Global Font Setup */
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #2c3e50;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  margin-top: 0;
+  color: #1f2d3d;
+}
+
+/* Buttons, Inputs, Forms */
+button,
+input,
+select,
+textarea {
+  font-family: "Inter", sans-serif;
+}
+
+/* Anchor override for login/register links */
+.form-container p a {
+  text-decoration: none;
+  color: #3498db;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Body Styling */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f6;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+body:hover {
+  background-color: #eef1f0;
+}
+
+/* Main Application Container */
+/* .app-container { */ /* This class might be obsolete or need adjustment with sidebar */
+  /* max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px; */
+/* } */
+
+/* Styles for content area when sidebar is present */
+.content-with-sidebar {
+  margin-left: 250px; /* Should match sidebar width from Sidebar.css */
+  padding: 20px 30px; /* Add some padding to the content area */
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 250px); /* Adjust width to fill remaining space */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Styles for content area when sidebar is not present (e.g., login page) */
+.content-full-width {
+  margin-left: 0;
+  padding: 20px 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Navbar - Old styles, can be removed or repurposed if a top bar is still needed in some views */
+.navbar {
+  background-color: #2c3e50;
+  padding: 15px 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: #1a252f;
+  transform: scale(1.01);
+}
+
+.navbar-brand {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #1abc9c;
+}
+
+.navbar-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1.1em;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #1abc9c;
+  transform: scale(1.1);
+  text-shadow: 0 0 5px #1abc9c;
+}
+
+/* Button Styles */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+/* Add left margin to buttons that follow another button for consistent spacing */
+.btn + .btn,
+button + button,
+.btn + button,
+button + .btn {
+  margin-left: 10px;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #7f8c8d;
+}
+
+.form-container a.btn.btn-primary,
+.form-container a.btn.btn-secondary {
+  color: white;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+.btn-success {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #27ae60;
+}
+
+/* Form Styles */
+.form-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: calc(100% - 22px);
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #2980b9;
+  box-shadow: 0 0 4px rgba(41, 128, 185, 0.2);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-error {
+  color: #e74c3c;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* Password visibility toggle */
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input[type="password"],
+.password-input-container input[type="text"] {
+  flex-grow: 1;
+  padding-right: 40px;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 5px;
+  color: #888;
+  font-size: 1.2em;
+  line-height: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-password-btn:hover {
+  color: #000;
+}
+
+/* Card Styles */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transform: scale(1.01);
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Table Styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table th {
+  background-color: #ecf0f1;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.table tbody tr {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.005);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-links a {
+    margin-left: 0;
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #34495e;
+  }
+
+  .navbar-links a:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  .form-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  /* .app-container {
+    padding: 10px;
+  } */
+  .content-with-sidebar {
+    margin-left: 0; /* Sidebar might be hidden or on top */
+    width: 100%;
+    padding: 15px;
+  }
+  .content-full-width {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1.5em;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 0.95em;
+  }
+
+  .card-title {
+    font-size: 1.3em;
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.mt-3 {
+  margin-top: 1rem;
+}
+.mt-4 {
+  margin-top: 1.5rem;
+}
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-3 {
+  margin-bottom: 1rem;
+}
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.p-3 {
+  padding: 1rem;
+}
+.p-4 {
+  padding: 1.5rem;
+}
+.p-5 {
+  padding: 3rem;
+}
+
+.d-flex {
+  display: flex;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+
+/* Dashboard Specific Styles */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.summary-card {
+  background-color: #1abc9c;
+  color: white;
+}
+
+.summary-card h3 {
+  margin-bottom: 10px;
+}
+
+.summary-card p {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.recent-transactions {
+  margin-top: 30px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-description {
+  font-weight: 500;
+}
+
+.transaction-amount {
+  font-weight: bold;
+}
+
+.transaction-amount.income {
+  color: #2ecc71;
+}
+
+.transaction-amount.expense {
+  color: #e74c3c;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.modal-content:hover {
+  transform: scale(1.01);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #777;
+}
+
+.modal-close-btn:hover {
+  color: #333;
+}
+
+/* Settings Page - Category Manager Specific Styles */
+.category-manager-container .list-group-item {
+  transition: background-color 0.2s ease-in-out;
+  padding: 10px;
+}
+
+.category-manager-container .list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.category-manager-container .add-category-input-group {
+  margin-top: 15px;
+  padding: 20px;
+}
+
+/* Container styling */
+.category-manager-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Section title */
+.category-manager-container h4 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.category-manager-container .add-category-input-group {
+  display: flex;
+  width: 100%;
+}
+
+.category-manager-container .add-category-input-group input[type="text"] {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+  flex: 1;
+  min-width: 0;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.category-manager-container .add-category-input-group input[type="text"]:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Style the button tightly next to input */
+.category-manager-container .add-category-input-group .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px; 
+  white-space: nowrap;
+  background-color: #3498db;
+  border: 1px solid #3498db;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.category-manager-container .add-category-input-group .btn:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+
+.card.p-3 {
+  padding: 1.5rem !important; 
+}
+
+
+/* Styles for the global sidebar toggle button */
+.global-sidebar-toggle-btn {
+  background-color: #343a40; /* Example background, match your theme */
+  color: #f8f9fa; /* Light text */
+  border: 1px solid #495057; /* Subtle border */
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 1rem; /* Or use an icon font */
+  cursor: pointer;
+  position: fixed; /* Fixed position */
+  top: 15px;
+  left: 15px;
+  z-index: 1051; /* Ensure it's above the sidebar when closed, and other content */
+  display: none; /* Hidden by default, shown via media query */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Show global toggle button on smaller screens */
+@media (max-width: 768px) {
+  .global-sidebar-toggle-btn {
+    display: block; /* Show the button */
+  }
+}

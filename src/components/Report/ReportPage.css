@@ -1,0 +1,189 @@
+/* General container for the custom report editor */
+.report-page-container.custom-report-editor {
+  padding: 25px;
+  max-width: 800px; /* Adjusted for a more focused editor view */
+  margin: 30px auto;
+  background-color: #ffffff; /* Cleaner white background */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.custom-report-editor h1 {
+  text-align: center;
+  color: #2c3e50; /* Darker, more professional heading color */
+  margin-bottom: 25px;
+  font-size: 2em; /* Slightly larger title */
+}
+
+/* Action buttons container */
+.report-actions {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 10px; /* Space between buttons */
+  margin-bottom: 25px;
+}
+
+/* Styling for form groups (label + input/textarea) */
+.custom-report-editor .form-group {
+  margin-bottom: 20px;
+}
+
+.custom-report-editor .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #34495e; /* Slightly softer label color */
+  font-size: 0.95em;
+}
+
+.custom-report-editor .form-control { /* Common class for input and textarea */
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d1d9e6; /* Softer border color */
+  border-radius: 6px;
+  font-size: 1em;
+  line-height: 1.5;
+  background-color: #f8f9fa; /* Very light background for inputs */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box; /* Ensure padding doesn't expand element size */
+}
+
+.custom-report-editor .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+  background-color: #fff; /* White background on focus */
+}
+
+.custom-report-editor textarea.form-control {
+  min-height: 250px; /* Good default height for content */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+/* Styles for the saved reports section (to be implemented later) */
+.saved-reports-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.saved-reports-section h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.saved-reports-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.saved-reports-section li {
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border: 1px solid #e9ecef;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.saved-reports-section li:hover {
+  background-color: #e9ecef;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.saved-reports-section li button {
+  margin-left: 10px;
+  padding: 5px 8px;
+  font-size: 0.8em;
+}
+
+
+/* Styles for the custom file input button */
+.form-group #imageUploadButton {
+  padding: 8px 12px;
+  border: 1px solid #28a745; /* Green border */
+  background-color: #28a745; /* Green background */
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block; /* Or block, depending on desired layout */
+  margin-top: 5px; /* Add some space if needed */
+}
+
+.form-group #imageUploadButton:hover {
+  background-color: #218838; /* Darker green on hover */
+  border-color: #1e7e34;
+}
+
+/* Ensure the actual file input is hidden */
+.hidden-file-input {
+  display: none !important;
+}
+
+/* General styling for report blocks if not already present */
+.report-block {
+  border: 1px solid #eee;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.report-block img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 4px;
+  margin-bottom: 10px; /* Space between image and remove button */
+}
+
+.report-block p {
+  white-space: pre-wrap; /* Preserve line breaks and spaces in text blocks */
+  margin-bottom: 10px; /* Space between text and remove button */
+}
+
+.report-block .btn-danger.btn-xs {
+  padding: 2px 5px;
+  font-size: 0.8rem;
+}
+
+.report-content-display h2,
+.saved-reports-section h2 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.saved-reports-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.saved-reports-section li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.saved-reports-section li:hover {
+    background-color: #f0f0f0;
+}
+
+.saved-reports-section li strong {
+    font-size: 1.1em;
+}
+
+.saved-reports-section li small {
+    color: #777;
+    display: block;
+    margin-top: 4px;
+}
