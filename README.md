@@ -61,10 +61,35 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/m
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+
+
+
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+<img width="280" height="344" alt="expanse(1)" src="https://github.com/user-attachments/assets/d17dfcb4-fd65-4047-b6b2-c59a74f60c91" />
+
+<img width="279" height="362" alt="expanse(2)" src="https://github.com/user-attachments/assets/c6736bf1-0d82-42f0-ba92-c432c432cca0" />
+
+<img width="960" height="446" alt="expanse(3)" src="https://github.com/user-attachments/assets/1e8a22bd-659a-4a26-9f94-d8beba0344db" />
+
+
+
+
+<img width="278" height="325" alt="expanse(4)" src="https://github.com/user-attachments/assets/c43fbbf7-5137-44b1-8549-530c4c86892b" />
+
+
+<img width="425" height="425" alt="expanse(5)" src="https://github.com/user-attachments/assets/4d452d10-ff64-4c10-8975-8bce480a655c" />
+
+
+<img width="330" height="340" alt="expanse(6)" src="https://github.com/user-attachments/assets/e4767016-1186-499f-ac2c-92e52d56e4f3" />
+
+
+
+
+
